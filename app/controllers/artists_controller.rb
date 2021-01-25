@@ -2,12 +2,9 @@ class ArtistsController < ApplicationController
 
     def index
         artists = Artist.all
-        render json: artists
+        render json: artists, include: :era
     end 
     
 end
 
 
-# render json: { birds: @birds, messages: ['Hello Birds', 'Goodbye Birds'] }.to_json
-
-# render json: sighting.to_json(include: [:bird, :location])
