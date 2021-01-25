@@ -6,15 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Artist.create(name: "Miles Davis")
-Artist.create(name: "John Coltrane")
-Artist.create(name: "Hank Mobley")
+Era.destroy_all
+Artist.destroy_all
 
-Era.create(name: "Early Jazz/New Orleans and Chicago Dixieland")
-Era.create(name: "Swing/Big Band")
-Era.create(name: "Bebop")
-Era.create(name: "Cool")
-Era.create(name: "Hard Bop")
-Era.create(name: "Free Jazz/Avant Garde")
-Era.create(name: "Fusion/Jazz-Rock")
-Era.create(name: "Eclecticisim")
+early = Era.create(name: "Early Jazz/New Orleans and Chicago Dixieland")
+swing = Era.create(name: "Swing/Big Band")
+bebop = Era.create(name: "Bebop")
+cool = Era.create(name: "Cool")
+hard_bop = Era.create(name: "Hard Bop")
+free_jazz = Era.create(name: "Free Jazz/Avant Garde")
+fusion = Era.create(name: "Fusion/Jazz-Rock")
+eclectic = Era.create(name: "Eclecticisim")
+
+Artist.create(name: "Miles Davis", era: cool)
+Artist.create(name: "Louis Armstrong", era: early)
+Artist.create(name: "Dizzy Gilespie", era: bebop)
