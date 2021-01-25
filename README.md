@@ -9,7 +9,11 @@ jazzipedia-project
             CLASSES
                 era.js
                 artist.js 
+3 AJAX Requests
 
+1. Get Artists and return associated Era's
+2. Delete request to artists
+3. post new activities
 
 <!-- # README
 
