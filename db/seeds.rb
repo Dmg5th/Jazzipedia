@@ -9,3 +9,12 @@
 Artist.create(name: "Miles Davis")
 Artist.create(name: "John Coltrane")
 Artist.create(name: "Hank Mobley")
+
+Era.create(name: "Early Jazz/New Orleans and Chicago Dixieland")
+Era.create(name: "Swing/Big Band")
+Era.create(name: "Bebop")
+Era.create(name: "Cool")
+Era.create(name: "Hard Bop")
+Era.create(name: "Free Jazz/Avant Garde")
+Era.create(name: "Fusion/Jazz-Rock")
+Era.create(name: "Eclecticisim")
