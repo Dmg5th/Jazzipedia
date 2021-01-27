@@ -6,8 +6,8 @@ class ArtistsController < ApplicationController
     end 
     
     def destroy
-        # Artist.find(params[:id]).destroy
-        # render :json => {id: params[:id]}
+        Artist.find(params[:id]).destroy
+        render :json => {id: params[:id]}
     end 
 end
 
