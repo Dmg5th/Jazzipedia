@@ -7,7 +7,7 @@ class ArtistsController < ApplicationController
 
     def create 
        era = Era.find_by(name: params[:era])
-       artist = Artist.create(name: params[:name], album: params[:album], bio: params[:bio], era: era)
+       artist = Artist.create(name: params[:name], album: params[:album], bio: params[:bio], url: [:url], era: era)
        render json: artist, :include => :era, :status => 201
     end 
 
