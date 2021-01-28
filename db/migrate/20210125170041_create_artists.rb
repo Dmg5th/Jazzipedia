@@ -2,6 +2,9 @@ class CreateArtists < ActiveRecord::Migration[6.0]
   def change
     create_table :artists do |t|
       t.string :name
+      t.string :album
+      t.text :bio
+      t.string :url
       t.integer :era_id
       
 
