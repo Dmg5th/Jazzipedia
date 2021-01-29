@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
         era = Era.find_by(name: params[:era])
         artist = Artist.create(name: params[:name], album: params[:album], bio: params[:bio], url: [:url], era: era)
         if artist.name != ""
-        render json: artist, :include => :era, :status => 201
+            render json: artist, :include => :era, :status => 201
         end 
     end 
 
