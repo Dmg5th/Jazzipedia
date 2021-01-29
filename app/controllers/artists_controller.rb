@@ -6,14 +6,16 @@ class ArtistsController < ApplicationController
     end 
 
     def create 
-       era = Era.find_by(name: params[:era])
-       artist = Artist.create(name: params[:name], album: params[:album], bio: params[:bio], url: [:url], era: era)
-       render json: artist, :include => :era, :status => 201
+        era = Era.find_by(name: params[:era])
+        artist = Artist.create(name: params[:name], album: params[:album], bio: params[:bio], url: [:url], era: era)
+        if artist.name != ""
+        render json: artist, :include => :era, :status => 201
+        end 
     end 
 
     def show
         artist = Artist.find(params[:id])
-        render json: artists, :include => :era , :status => 200
+        render json: artist, :include => :era , :status => 200
     end 
     
     # def destroy
